@@ -124,7 +124,7 @@
         }
 
         section {
-            margin: 20px;
+            margin: 20px 0; /* Adjusted vertical margin */
             padding: 20px;
             background-color: #222;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -144,8 +144,8 @@
         }
 
         .carousel img {
-            flex: 0 0 calc(20% - 10px);
-            height: 150px;
+            max-height: 80vh; /* Adjusted max height for fullscreen view */
+            width: auto;
             margin: 5px;
             transition: transform 0.3s ease-in-out;
             cursor: pointer;
@@ -172,11 +172,6 @@
             max-width: 80%;
             max-height: 80%;
             margin: auto;
-        }
-
-        .modal img {
-            width: 100%;
-            height: 100%;
         }
 
         .close {
@@ -231,19 +226,15 @@
 <body>
 
     <!-- Landing Page -->
-    <div class="landing-page">
+    <div class="landing-page" onclick="showMainContent()">
         <img src="UWHIPHOP_DDR.png" alt="Landing Image">
-        <div class="arrow-down" onclick="showMainContent()">
+        <div class="arrow-down" id="arrow">
             <img src="Layer 11 copy.png" alt="Arrow Image">
         </div>
     </div>
 
     <!-- Main Content (Initially Hidden) -->
     <div class="main-content">
-        <header>
-            <h1>UWHH REBRAND</h1>
-        </header>
-
         <nav>
             <ul>
                 <li><a href="#about">ABOUT</a></li>
@@ -253,6 +244,7 @@
         </nav>
 
         <section id="about" class="section">
+            <!-- Removed "UWHH REBRAND" text -->
             <h2>ABOUT</h2>
             <p>
                 Hi, I'm Tien, the Creative Director for UWHIPHOP – UWaterloo's premier dance club dedicated to hip hop, choreography, and community. As the creative mind behind the club, I've spearheaded an exciting rebranding initiative that reflects our passion for dance and unity.
@@ -262,7 +254,7 @@
         </section>
 
         <section id="gallery" class="section">
-            <h2>Photo Gallery</h2>
+            <h2>GALLERY</h2>
             <!-- Second Row of Carousels -->
             <div class="carousel-container">
                 <div class="carousel" onclick="openModal()">
@@ -288,7 +280,7 @@
             <!-- Vimeo Video -->
             <div class="video-container">
                 <div style="padding:56.25% 0 0 0;position:relative;">
-                    <iframe src="https://player.vimeo.com/video/895741726?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="PRESS START TO PLAY"></iframe>
+                    <iframe src="https://player.vimeo.com/video/895741726?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="PRESS START TO PLAY"></iframe>
                 </div>
                 <script src="https://player.vimeo.com/api/player.js"></script>
             </div>
@@ -298,40 +290,22 @@
             <h2>SOCIALS</h2>
             <div class="social-container">
                 <a href="https://www.instagram.com/uwhiphop/" target="_blank"> @uwhiphop</a>
-                <p>Email: your_email@example.com</p>
+                <p>Email me at: notmyemail@uwhh.com</p>
             </div>
         </section>
 
         <footer>
-            <p>&copy; 2023 Your Name | Photography Portfolio</p>
+            <p> 2023 Tien Nguyen | UWHH Portfolio</p>
         </footer>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal" id="myModal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <img id="modalImage" src="" alt="Full Image">
-        </div>
     </div>
 
     <!-- JavaScript to toggle the 'show' class and open/close modal -->
     <script>
         function showMainContent() {
             document.querySelector('.main-content').style.display = 'block';
+            document.getElementById('arrow').style.display = 'none'; // Hide arrow on click
         }
 
-        // Open modal
-        function openModal() {
-            var modal = document.getElementById('myModal');
-            modal.style.display = 'flex';
-        }
-
-        // Close modal
-        function closeModal() {
-            var modal = document.getElementById('myModal');
-            modal.style.display = 'none';
-        }
     </script>
 
 </body>
