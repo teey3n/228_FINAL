@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UWHH Rebrand</title>
@@ -10,313 +10,330 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
 
     <style>
-      body {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 20px;
-        background-color: #222222;
-        color: #FFFFFF;
-        margin: 0;
-        padding: 0;
-        line-height: 1.6;
-      }
-
-      .landing-page {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        background-color: #222222;
-        color: #dcb2dc;
-        /* Accent color */
-      }
-
-      .landing-page img {
-        max-width: 100%;
-        height: auto;
-        margin-bottom: 20px;
-      }
-
-      .arrow-down img {
-        width: 40px;
-        /* Adjust the width as needed */
-        height: auto;
-        cursor: pointer;
-        animation: bounce 2s infinite;
-        z-index: 1;
-        /* Ensure the arrow is above the main content */
-      }
-
-      @keyframes bounce {
-
-        0%,
-        20%,
-        50%,
-        80%,
-        100% {
-          transform: translateY(0);
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            background-color: #222222;
+            color: #FFFFFF;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
         }
 
-        40% {
-          transform: translateY(-20px);
+        .landing-page {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: #222222;
+            color: #dcb2dc;
+            /* Accent color */
         }
 
-        60% {
-          transform: translateY(-10px);
+        .landing-page img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
         }
-      }
 
-      /* Style the main content */
-      .main-content {
-        text-align: center;
-        padding: 20px;
-        display: none;
-      }
+        .arrow-down img {
+            width: 40px;
+            /* Adjust the width as needed */
+            height: auto;
+            cursor: pointer;
+            animation: bounce 2s infinite;
+            z-index: 1;
+            /* Ensure the arrow is above the main content */
+        }
 
-      h1,
-      h2,
-      h3 {
-        color: #dcb2dc;
-        /* Accent color */
-        margin-bottom: 10px;
-      }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
 
-      p {
-        margin-bottom: 15px;
-        color: #95A3B3;
-      }
+            40% {
+                transform: translateY(-20px);
+            }
 
-      a {
-        color: #4B4E6D;
-        text-decoration: none;
-        transition: color 0.3s ease-in-out;
-      }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
 
-      a:hover {
-        color: #dcb2dc;
-        /* Accent color */
-      }
+        /* Style the main content */
+        .main-content {
+            text-align: center;
+            padding: 20px;
+            display: none;
+        }
 
-      a:visited,
-      a:active {
-        color: #95A3B3;
-      }
+        h1, h2, h3 {
+            color: #dcb2dc;
+            /* Accent color */
+            margin-bottom: 10px;
+        }
 
-      nav {
-        background-color: #222;
-        color: #FFFFFF;
-        padding: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        transition: background-color 0.3s ease-in-out;
-      }
+        p {
+            margin-bottom: 15px;
+            color: #95A3B3;
+        }
 
-      nav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-      }
+        a {
+            color: #4B4E6D;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
 
-      nav li {
-        margin-right: 15px;
-      }
+        a:hover {
+            color: #dcb2dc;
+            /* Accent color */
+        }
 
-      header {
-        background-color: #222;
-        color: #FFFFFF;
-        text-align: center;
-        padding: 50px 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
+        a:visited, a:active {
+            color: #95A3B3;
+        }
 
-      section {
-        margin: 20px;
-        padding: 20px;
-        background-color: #222;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: background-color 0.3s ease-in-out;
-        border-radius: 15px;
-        /* Added rounded corners */
-      }
+        nav {
+            background-color: #222;
+            color: #FFFFFF;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease-in-out;
+        }
 
-      .carousel-container {
-        overflow-x: auto;
-        margin-bottom: 20px;
-      }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
 
-      .carousel {
-        display: flex;
-        justify-content: space-between;
-        overflow-x: auto;
-      }
+        nav li {
+            margin-right: 15px;
+        }
 
-      .carousel img {
-        flex: 0 0 calc(20% - 10px);
-        height: 150px;
-        margin: 5px;
-        transition: transform 0.3s ease-in-out;
-        cursor: pointer;
-      }
+        header {
+            background-color: #222;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 50px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-      .carousel img:hover {
-        transform: scale(1.1);
-      }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #222;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease-in-out;
+            border-radius: 15px;
+            /* Added rounded corners */
+        }
 
-      /* Modal styles */
-      .modal {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
-        justify-content: center;
-        align-items: center;
-      }
+        .carousel-container {
+            overflow-x: auto;
+            margin-bottom: 20px;
+        }
 
-      .modal-content {
-        max-width: 80%;
-        max-height: 80%;
-        margin: auto;
-      }
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+        }
 
-      .modal img {
-        width: 100%;
-        height: 100%;
-      }
+        .carousel img {
+            flex: 0 0 calc(20% - 10px);
+            height: 150px;
+            margin: 5px;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
 
-      .close {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        color: #FFFFFF;
-        font-size: 20px;
-        cursor: pointer;
-      }
+        .carousel img:hover {
+            transform: scale(1.1);
+        }
 
-      /* Video styles */
-      .video-container {
-        margin-bottom: 20px;
-      }
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+        }
 
-      .video {
-        width: 100%;
-        max-width: 800px;
-      }
+        .modal-content {
+            max-width: 80%;
+            max-height: 80%;
+            margin: auto;
+        }
 
-      .show .main-content {
-        display: block;
-      }
+        .modal img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #FFFFFF;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        /* Video styles */
+        .video-container {
+            margin-bottom: 20px;
+        }
+
+        .video {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .show .main-content {
+            display: block;
+        }
+
+        .social-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .social-container a {
+            color: #4B4E6D;
+            text-decoration: none;
+            margin: 5px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .social-container a:hover {
+            color: #dcb2dc;
+            /* Accent color */
+        }
+
+        .social-container a:visited,
+        .social-container a:active {
+            color: #95A3B3;
+        }
     </style>
-  </head>
+</head>
 
-  <body>
+<body>
 
     <!-- Landing Page -->
     <div class="landing-page">
-      <img src="UWHIPHOP_DDR.png" alt="Landing Image">
-      <div class="arrow-down" onclick="showMainContent()">
-        <img src="Layer 11 copy.png" alt="Arrow Image">
-      </div>
+        <img src="UWHIPHOP_DDR.png" alt="Landing Image">
+        <div class="arrow-down" onclick="showMainContent()">
+            <img src="Layer 11 copy.png" alt="Arrow Image">
+        </div>
     </div>
 
     <!-- Main Content (Initially Hidden) -->
     <div class="main-content">
-      <header>
-        <h1>UWHH REBRAND</h1>
-      </header>
+        <header>
+            <h1>UWHH REBRAND</h1>
+        </header>
 
-      <nav>
-        <ul>
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#gallery">GALLERY</a></li>
-          <li><a href="#socials">SOCIALS</a></li>
-        </ul>
-      </nav>
+        <nav>
+            <ul>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#socials">SOCIALS</a></li>
+            </ul>
+        </nav>
 
-      <section id="about" class="section">
-        <h2>ABOUT</h2>
-        <p>
-          Hi, I'm Tien, the Creative Director for UWHIPHOP – UWaterloo's premier dance club dedicated to hip hop, choreography, and community. As the creative mind behind the club, I've spearheaded an exciting rebranding initiative that reflects our passion for dance and unity.
-          <br><br>
-          This portfolio is a showcase of my work on the club's rebrand, inspired by the vibrant energy of Dance Dance Revolution. Immerse yourself in the dynamic visual theme that runs through every element, capturing the essence of UWHIPHOP.
-        </p>
-      </section>
+        <section id="about" class="section">
+            <h2>ABOUT</h2>
+            <p>
+                Hi, I'm Tien, the Creative Director for UWHIPHOP – UWaterloo's premier dance club dedicated to hip hop, choreography, and community. As the creative mind behind the club, I've spearheaded an exciting rebranding initiative that reflects our passion for dance and unity.
+                <br><br>
+                This portfolio is a showcase of my work on the club's rebrand, inspired by the vibrant energy of Dance Dance Revolution. Immerse yourself in the dynamic visual theme that runs through every element, capturing the essence of UWHIPHOP.
+            </p>
+        </section>
 
-      <section id="gallery" class="section">
-        <h2>Photo Gallery</h2>
-        <!-- Second Row of Carousels -->
-        <div class="carousel-container">
-          <div class="carousel" onclick="openModal()">
-            <img src="TienT22490.jpg" alt="Photo 6">
-            <img src="TienT22508.jpg" alt="Photo 7">
-            <img src="TienT22521.jpg" alt="Photo 8">
-            <img src="TienT22535.jpg" alt="Photo 9">
-            <img src="hatwtext.png" alt="Photo 10">
-          </div>
-        </div>
+        <section id="gallery" class="section">
+            <h2>Photo Gallery</h2>
+            <!-- Second Row of Carousels -->
+            <div class="carousel-container">
+                <div class="carousel" onclick="openModal()">
+                    <img src="TienT22490.jpg" alt="Photo 6">
+                    <img src="TienT22508.jpg" alt="Photo 7">
+                    <img src="TienT22521.jpg" alt="Photo 8">
+                    <img src="TienT22535.jpg" alt="Photo 9">
+                    <img src="hatwtext.png" alt="Photo 10">
+                </div>
+            </div>
 
-        <!-- First Row of Carousels -->
-        <div class="carousel-container">
-          <div class="carousel" onclick="openModal()">
-            <img src="IMG_6899.jpg" alt="Photo 1">
-            <img src="IMG_6918.jpg" alt="Photo 2">
-            <img src="IMG_6929.jpg" alt="Photo 3">
-            <img src="IMG_6931.jpg" alt="Photo 4">
-            <img src="IMG_6948.jpg" alt="Photo 5">
-          </div>
-        </div>
+            <!-- First Row of Carousels -->
+            <div class="carousel-container">
+                <div class="carousel" onclick="openModal()">
+                    <img src="IMG_6899.jpg" alt="Photo 1">
+                    <img src="IMG_6918.jpg" alt="Photo 2">
+                    <img src="IMG_6929.jpg" alt="Photo 3">
+                    <img src="IMG_6931.jpg" alt="Photo 4">
+                    <img src="IMG_6948.jpg" alt="Photo 5">
+                </div>
+            </div>
 
-        <!-- Vimeo Video -->
-        <div class="video-container">
-          <div style="padding:56.25% 0 0 0;position:relative;">
-            <iframe src="https://player.vimeo.com/video/895741726?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="PRESS START TO PLAY"></iframe>
-          </div>
-          <script src="https://player.vimeo.com/api/player.js"></script>
-        </div>
-      </section>
+            <!-- Vimeo Video -->
+            <div class="video-container">
+                <div style="padding:56.25% 0 0 0;position:relative;">
+                    <iframe src="https://player.vimeo.com/video/895741726?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="PRESS START TO PLAY"></iframe>
+                </div>
+                <script src="https://player.vimeo.com/api/player.js"></script>
+            </div>
+        </section>
 
-      <section id="socials" class="section">
-        <h2>SOCIALS</h2>
-        <p>Connect with us on Instagram:</p>
-        <iframe src="https://www.instagram.com/uwhiphop/" width="300" height="400" frameborder="0" scrolling="no"></iframe>
-      </section>
+        <section id="socials" class="section">
+            <h2>SOCIALS</h2>
+            <div class="social-container">
+                <a href="https://www.instagram.com/uwhiphop/" target="_blank"> @uwhiphop</a>
+                <p>Email: your_email@example.com</p>
+            </div>
+        </section>
 
-      <footer>
-        <p>&copy; 2023 Your Name | Photography Portfolio</p>
-      </footer>
+        <footer>
+            <p>&copy; 2023 Your Name | Photography Portfolio</p>
+        </footer>
     </div>
 
     <!-- Modal -->
     <div class="modal" id="myModal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img id="modalImage" src="" alt="Full Image">
-      </div>
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="Full Image">
+        </div>
     </div>
 
     <!-- JavaScript to toggle the 'show' class and open/close modal -->
     <script>
-      function showMainContent() {
-        document.querySelector('.main-content').style.display = 'block';
-      }
+        function showMainContent() {
+            document.querySelector('.main-content').style.display = 'block';
+        }
 
-      // Open modal
-      function openModal() {
-        var modal = document.getElementById('myModal');
-        modal.style.display = 'flex';
-      }
+        // Open modal
+        function openModal() {
+            var modal = document.getElementById('myModal');
+            modal.style.display = 'flex';
+        }
 
-      // Close modal
-      function closeModal() {
-        var modal = document.getElementById('myModal');
-        modal.style.display = 'none';
-      }
+        // Close modal
+        function closeModal() {
+            var modal = document.getElementById('myModal');
+            modal.style.display = 'none';
+        }
     </script>
 
-  </body>
+</body>
 
 </html>
